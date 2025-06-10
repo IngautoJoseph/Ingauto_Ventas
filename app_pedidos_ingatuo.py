@@ -105,9 +105,12 @@ if enviar:
         msg["From"] = "accesoriossd@ingauto.com.ec"
         msg["To"] = correo
         msg["Cc"] = "accesoriossd@ingauto.com.ec"
-        msg.set_content(f"Hola {nombre},
+        msg.set_content(f"""Hola {nombre},
 
 Adjunto encontrarás el PDF de tu pedido realizado.
+
+Gracias por confiar en Ingatuo Loja.
+""")
 
 Gracias por confiar en Ingatuo Loja.")
         with open(pdf_file, "rb") as f:
