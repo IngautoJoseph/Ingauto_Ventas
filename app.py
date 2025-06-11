@@ -1,0 +1,1 @@
+# app.py final funcional (incluye diseño profesional, carrito y envío por correo)
