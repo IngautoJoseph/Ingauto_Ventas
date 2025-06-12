@@ -126,10 +126,12 @@ if st.session_state.carrito:
             msg["From"] = "accesoriossd@ingauto.com.ec"
             msg["To"] = correo
             msg["Cc"] = "accesoriossd@ingauto.com.ec"
-            msg.set_content(f"Hola {nombre},
+            msg.set_content(f"""Hola {nombre},
 
 Adjunto encontrarás el PDF de tu pedido realizado.
-Gracias por confiar en Ingatuo Loja.")
+
+Gracias por confiar en Ingatuo Loja.
+""") 
             with open(archivo_pdf, "rb") as f:
                 msg.add_attachment(f.read(), maintype="application", subtype="pdf", filename=archivo_pdf)
             with smtplib.SMTP_SSL("mail.ingauto.com.ec", 465) as smtp:
