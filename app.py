@@ -70,7 +70,7 @@ if st.session_state.carrito:
         total += item["Subtotal"]
         if col5.button("❌", key=f"borrar_{i}"):
             st.session_state.carrito.pop(i)
-            st.experimental_rerun()
+            st.rerun()
 
     st.markdown(f"### 💰 Total: ${total:.2f}")
 
