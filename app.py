@@ -129,7 +129,7 @@ if st.session_state.carrito:
             msg.set_content(f"Hola {nombre},
 
 Adjunto encontrarás el PDF de tu pedido realizado.
-
+")
 Gracias por confiar en Ingatuo Loja.")
             with open(archivo_pdf, "rb") as f:
                 msg.add_attachment(f.read(), maintype="application", subtype="pdf", filename=archivo_pdf)
